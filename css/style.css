@@ -124,6 +124,14 @@ a i {
   background-color: #c4c4c4;
   color: black;
 }
+
+.padding {
+  border: 2px solid rgb(240, 240, 240);
+  width: 100%;
+  background-color: #bebbbb94;
+  border-radius: 10px;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
