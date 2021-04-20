@@ -142,6 +142,18 @@ a i {
   border-radius: 10px;
 }
 
+h2 {
+  font-style: bold;
+  color: black;
+}
+
+.textgambar {
+  color: white;
+  position: relative;
+  bottom: 40px;
+  left: 110px;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
