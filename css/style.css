@@ -115,6 +115,16 @@ a i {
   color: black;
 }
 
+.info-panel2 {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: 80px;
+  padding: 30px;
+  margin-left: 60px;
+  background-color: #ffffff;
+  color: black;
+}
+
 .info-panal {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
