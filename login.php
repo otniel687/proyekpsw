@@ -1,20 +1,24 @@
+<!DOCTYPE HTML>
 <html>
-<head>
-<title>Halaman Login</title>
-    <link href="" rel="stylesheet" type="text/css" />
-</head>
-<body Onload="document.login.username.focus();">
-    <div id="header"></div>
-    <div id="content">
-        <h2>Login</h2>
-        <form name="Login" action="1index.php" method="POST">
-            <table>
-                <tr><td>Username</td><td> : <input type="text" name="username" require></td></tr>
-                <tr><td>Passwoard</td><td> : <input type="passwoard" name="passwoard" require></td></tr>
-                <tr><td colspan="2"><input type="submit" value="Login"></td></tr>
-            </table>
-        </form>
-    <div>
-    <div id="footer"></div>
-</body>
-</html>
+    <head>
+        <title>Halaman Login</title>
+        <link rel="stylesheet" href="css/style3.css">
+    </head>
+   
+    <body>
+            <div class="container">
+                <center>
+                    <h1>Login</h1>
+                    <hr color="black" width="28%"> <br>
+                    <h2>AOTLIE service</h2>
+                </center> <br>
+                  <form>
+                      <label>Username</label><br>
+                      <input type="text"><br><br>
+                      <label>Password</label><br>
+                      <input type="password"><br><br>
+                      <p><label for="setcookie"><input type="checkbox" name="setcookie" value="true" id="setcookie" /> Remember Me</label></p>
+                      <button><a href="index.html">Log In</a></button>
+                  </form>
+    </body>
+    </html>
