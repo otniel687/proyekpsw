@@ -1,6 +1,6 @@
 @extends('layouts.defaultone')
 
-@section('title', 'service')
+@section('title', 'Service')
     
 @section('navbar')
     <header>

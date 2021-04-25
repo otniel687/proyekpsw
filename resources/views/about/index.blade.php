@@ -37,7 +37,7 @@
                 <a class="nav-link" href="{{asset('/kontak')}} ">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-item btn btn-primary tombol" href="{{asset('login')}}l">Login</a>
+                <a class="nav-item btn btn-primary tombol" href="{{asset('/login')}}l">Login</a>
               </li>
             </ul>
           </div>
