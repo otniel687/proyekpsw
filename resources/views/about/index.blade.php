@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="css/Image/logo.jpeg" />
     <title>About | AOTLIE</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -16,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-inverse navbar-light">
       <div class="container">
         <a class="navbar-brand" href="{{asset('/')}} ">
-          <h1>AOTLIE Service</h1>
+          <h1><img src="css/Image/logo.jpeg" class="rounded-circle" style="width: 45px" alt="" />AOTLIE Service</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

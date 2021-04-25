@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
   <head>
-    <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <title>Login</title>
+    <link rel="icon" href="{{asset('css/Image/logo.jpeg')}} " />
+    <title>Login | AOTLIE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}} " />
+    <link rel="stylesheet" href="{{asset('css/style_login.css')}} " />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      font-family: "Open Sans", sans-serif;
-    }
-    body {
-      height: 100vh;
-      background-color: #bebbbb94;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    h1 {
-      color: black;
-    }
-  </style>
   <body>
-    <div class="sebagai">
-      <center>
-        <h1>Login</h1>
-        <hr style="border: 2px solid black" width="75%" />
-        <br />
-        <h2>Login Sebagai</h2>
-      </center>
-      <br />
-      <form action="" class="valid d-flex justify-content-center" method="POST">
-        <a href="{{asset('/login/customer')}} " class="btn btn-primary">Customer</a>
-        <a href="{{asset('/login/mekanik')}}" class="btn btn-secondary">Mekanik</a>
-        <a href="{{asset('/login/admin')}}" class="btn btn-warning">Admin</a>
-      </form>
-    </div>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-lg-5">
+            <div class="wrap">
+              <div class="img" style="background-image: url({{url('css/Image/mekanik.jpg')}} )"></div>
+              <div class="login-wrap p-4 p-md-5">
+                <div class="d-flex">
+                  <div class="w-100">
+                    <h3 class="mb-4">Log In Sebagai</h3>
+                  </div>
+                </div>
+                <form action="#" class="signin-form logins">
+                  <a href="{{url('/login/admin')}} " class="btn btn-primary">Admin</a>
+                  <a href="{{url('/login/customer')}} " class="btn btn-secondary">Customer</a>
+                  <a href="{{url('/login/mekanik')}} " class="btn btn-warning">Mekanik</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

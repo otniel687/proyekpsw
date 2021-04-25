@@ -22,4 +22,8 @@ class LoginController extends Controller
     {
         return view('login.customer');
     }
+    public function regis()
+    {
+        return view('login.regis');
+    }
 }

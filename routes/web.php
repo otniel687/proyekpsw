@@ -31,3 +31,4 @@ Route::get('/login', [LoginController::class,'login']);
 Route::get('/login/admin', [LoginController::class,'admin']);
 Route::get('/login/customer', [LoginController::class,'customer']);
 Route::get('/login/mekanik', [LoginController::class,'mekanik']);
+Route::get('/login/regis', [LoginController::class,'regis']);

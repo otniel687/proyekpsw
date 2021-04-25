@@ -1,44 +1,56 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
   <head>
-    <link href="{{asset('css/style.css')}}" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-    <title>Login</title>
+    <link rel="icon" href="{{asset('css/Image/logo.jpeg')}} " />
+    <title>Login | AOTLIE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}} " />
+    <link rel="stylesheet" href="{{asset('css/style_login.css')}} " />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      font-family: "Open Sans", sans-serif;
-    }
-    body {
-      height: 100vh;
-      background-color: #bebbbb94;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  </style>
   <body>
-    <div class="login">
-      <center>
-        <h1>Login</h1>
-        <hr color="black" width="28%" />
-        <br />
-        <h2>AOTLIE service</h2>
-      </center>
-      <br />
-      <form action="" method="POST">
-        <label for="email" class="form_label">Username</label><br />
-        <input type="email" class="form_control" id="email" aria-describedby="emailHelp" name="email" /><br /><br />
-        <label for="password" class="form_label">Password</label><br />
-        <input type="password" class="form_control" id="password" name="password" aria-describedby="passwordHelp" /><br /><br /><br />
-        <div class="button">
-          <a class="a" href="customer.php">Login </a>
-          <a class="b" href="register.php">Create Akun </a>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-lg-5">
+            <div class="wrap">
+              <div class="img" style="background-image: url({{url('css/Image/Peralatan.jpg')}} )"></div>
+              <div class="login-wrap p-4 p-md-5">
+                <div class="d-flex">
+                  <div class="w-100">
+                    <h3 class="mb-4">Log In</h3>
+                  </div>
+                </div>
+                <form action="#" class="signin-form">
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" required />
+                    <label class="form-control-placeholder" for="username">Username</label>
+                  </div>
+                  <div class="form-group">
+                    <input id="password-field" type="password" class="form-control" required />
+                    <label class="form-control-placeholder" for="password">Password</label>
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+                  </div>
+                  <div class="form-group d-md-flex">
+                    <div class="w-50 text-left">
+                      <a href="{{url('/login/regis')}}">Sign Up</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="icon" href="{{asset('css/Image/logo.jpeg')}} " />
     <title>@yield('title') | AOTLIE </title>
 
     <!-- Bootstrap CSS -->
