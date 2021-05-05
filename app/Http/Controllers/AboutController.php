@@ -14,4 +14,8 @@ class AboutController extends Controller
     {
         return view('registrasi.registration');
     }
+    public function kontak()
+    {
+        return view('kontak.index');
+    }
 }

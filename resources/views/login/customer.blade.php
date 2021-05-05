@@ -23,15 +23,27 @@
                     <h3 class="mb-4">Log In</h3>
                   </div>
                 </div>
-                <form action="#" class="signin-form">
+                <div class="card-header">{{ __('Login') }}</div>
+                <form action="{{ route('login') }}" class="signin-form" method="POST" >
+                  @csrf
                   <div class="form-group mt-3">
                     <input type="text" class="form-control" required />
                     <label class="form-control-placeholder" for="username">Username</label>
+                    @error('email')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <input id="password-field" type="password" class="form-control" required />
                     <label class="form-control-placeholder" for="password">Password</label>
                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    @error('password')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>

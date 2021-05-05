@@ -20,7 +20,7 @@
               <div class="login-wrap p-4 p-md-5">
                 <div class="d-flex">
                   <div class="w-100">
-                    <h3 class="mb-4">Log In</h3>
+                    <a href="{{asset('/')}} "><h3 class="mb-4">Log In</h3></a>
                   </div>
                 </div>
                 @if(session('error'))
@@ -50,6 +50,7 @@
                     @endif
                   </div>
                   <div class="form-group">
+                    <input id="password-field" type="password" class="form-control" id="inputPassword" name="password" required />
                     <label class="form-control-placeholder" for="password">Password</label>
                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                     @if($errors->has('password'))
@@ -61,7 +62,7 @@
                   </div>
                   <div class="form-group d-md-flex">
                     <div class="w-50 text-left">
-                      <a href="{{url('/login/regis')}}">Sign Up</a>
+                      <a href="{{url('register')}}">Sign Up</a>
                     </div>
                   </div>
                 </form>

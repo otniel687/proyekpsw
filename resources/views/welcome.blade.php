@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
   </head>
   <body>
-    <!--Navbar-->
+    
+ <!--Navbar-->
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-inverse navbar-light">
@@ -50,18 +51,18 @@
         </div>
       </nav>
     </header>
-
+    
     <!--Akhir Navbar-->
 
     <!--Header-->
-    <section id="header" class="d-flex align-items-center">
-      <div class="container p-4 p-md-5 mb-4 text-white rounded" style="color: #fff; background-size: cover">
-        <div class="col-md-6 px-0">
-          <h1 class="display-4 fst-italic">Jujur, Berkualitas dan Terjangkau</h1>
-          <p class="lead my-3">Menjamin kenyamanan Anda</p>
-        </div>
+    <header class="masthead">
+      <div class="container">
+        <div class="masthead-subheading">Jujur, Berkualitas dan Terjangkau</div>
+        <div class="masthead-heading text-uppercase">Menjamin kenyamanan Anda</div>
+        <a class="btn btn-primary btn-xl text-uppercase tekan" href="{{asset('login')}} ">Mari Bergabung</a>
       </div>
-    </section>
+    </header>
+
     <!--Akhir Header-->
 
     <!--informasi -->
@@ -91,33 +92,39 @@
     <!--akhir Informasi-->
 
     <!--isi-->
-    <section class="mt-5 text-center">
+    <section class="text-center" style="margin-top: 100px; margin-bottom: 50px">
       <div class="container">
         <div class="row">
           <div class="col">
             <h1>Kemudahan Dalam Satu Platform</h1>
           </div>
         </div>
-        <div class="row">
+        <div class="row ms-4">
           <div class="col">
-            <p>Aotlie menyediakan beragam kebutuhan otomotif Anda, dengan service yang baik dan terjangkau. Aotlie akan selalu membantu anda dalam menyelesaikan masalah kendaraan anda.</p>
+            <p>
+              Kami menyediakan proses layanan cepat di Tempat Service kami. Aotlie adalah salah satu tempat service mobil terbaik yang masuk akal, tempat kami dapat memperbaiki hampir semua model mobil. Layanan kami meliputi perbaikan /
+              penggantian layar sentuh, perbaikan kerusakan cairan dan air, perbaikan kerusakan dan kerusakan fisik, Service AC, Ganti Oli, Tune Up, Overhaul. Dan dikerjakan dengan cepat dan tepat. Jadi jangan sungkan sungkan untuk
+              menggunakan layanan kami di Aotlie Service.
+            </p>
           </div>
         </div>
       </div>
     </section>
     <!--Akhir isi-->
 
-    <!--penting-->
-    <section id="promot">
-      <div class="row justify-content-center">
-        <div class="col-md-10 info-panal">
-          <div class="row d-flex justify-content-center text-center figure">
-            <img src="css/Image/service.jpg" class="img-fluib" alt="" />
-            <h1 class="mt-3">So start using our service by adding your vehicle</h1>
-          </div>
+    <div class="container" style="margin-bottom: 100px">
+      <div class="card mt-4">
+        <img class="card-img-top img-fluid" src="css/Image/service.jpg" alt="..." />
+        <div class="card-body">
+          <h3 class="card-title">Sejarah AOTLIE</h3>
+          <p class="card-text">
+            Aotlie Service merupakan salah satu servis mobil yang berada di Laguboti, Toba, Sumatera Utara. Bengkel ini berdiri pada tahun 2011 yang dikelola oleh Jeremy Parasian WIbowo dengan Dita Sarah. Seiring berkembangnya waktu,
+            dibarengi dengan kemampuan montirnya yang baik serta pelayanan yang ramah,
+            <a href="{{asset('/about')}} ">Selengkapnya</a>
+          </p>
         </div>
       </div>
-    </section>
+    </div>
     <!--Akhir Penting -->
 
     <!--Footer-->

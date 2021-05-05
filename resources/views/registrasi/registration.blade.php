@@ -95,17 +95,6 @@
                   <input type="text" class="form-control" id="stnk" name="stnk" />
                 </div>
                 <div>
-                  <label for="servis" class="form-label">Tipe Servis</label><br />
-                  <select id="servis" name="servis" class="pilihan">
-                    <option>Pilih tipe servis</option>
-                    <option>Tune Up</option>
-                    <option>Ganti Oli</option>
-                    <option>Servis AC</option>
-                    <option>Pemasangan Audio Mobil</option>
-                    <option>Overhaul</option>
-                  </select>
-                </div>
-                <div>
                   <label for="masalah" class="form-label">Masalah pada Mobil</label><br>
                   <textarea id="masalah" name="masalah" class="deskripsi"></textarea>
                 </div>

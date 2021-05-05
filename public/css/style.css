@@ -1,8 +1,7 @@
-html {
-  padding: 0;
-  width: 100%;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 body {
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   padding: 0;
   width: 100%;
 }
@@ -16,40 +15,80 @@ textarea {
 .navbar-inverse {
   background-color: #29bfb6;
 }
+
+.navbar-inverse h1 {
+  font-family: "Alfa Slab One", cursive;
+}
 #promot {
   padding-bottom: 12rem;
 }
 
-#header {
-  height: 70vh;
-  width: 100%;
-  background: url("image/header.jpg");
-  background-color: transparent;
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  /* color: #000;
+  text-shadow: 2px 2px 2px rgb(253, 253, 255); */
+  background-image: url("Image/header.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
   background-size: cover;
-  position: relative;
-  padding: 0;
-  filter: brightness(70%);
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #000;
+  text-shadow: 2px 2px 2px rgb(253, 253, 255);
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 2px 2px 2px rgb(253, 253, 255);
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-#header .container {
-  padding-top: 510px;
+header.masthead .tekan {
+  width: 250px;
+  height: 40px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
 }
 
-#header h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 56px;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
+.showcase .showcase-text {
+  padding: 3rem;
 }
-
-#header p {
-  font-weight: 100;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
 }
 
 .tab {
@@ -326,9 +365,13 @@ h3 {
 .regis {
   color: black;
   border-radius: 12px;
-  background-color: #29bfb6;
+  /* background-color: #29bfb6; */
   background-repeat: no-repeat;
   background-size: 100%;
+  background-color: #06302e;
+  background-image: url("Image/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .regis .row {
@@ -348,8 +391,10 @@ h3 {
   margin-right: 40px;
 }
 
-.regis label {
-  text-shadow: 1px 1px 1px rgb(138, 139, 139);
+.regis label,
+.regis h3,
+.regis h6 {
+  color: #ffff;
 }
 
 .pilihan {
@@ -384,7 +429,7 @@ h3 {
 .judul h2 {
   margin-bottom: 40px;
   background-color: #29bfb6;
-  width: 250px;
+  width: 280px;
   height: 45px;
   border-radius: 10px;
 }
@@ -455,9 +500,6 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  #header {
-    background-attachment: fixed;
-  }
 }
 
 @media (max-width: 992px) {
@@ -472,16 +514,6 @@ h3 {
 }
 
 @media (max-height: 500px) {
-  #header {
-    height: auto;
-  }
-  #header {
-    height: auto;
-  }
-  #header .container {
-    padding-top: 130px;
-    padding-bottom: 60px;
-  }
 }
 
 @media (max-width: 768px) {
