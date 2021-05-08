@@ -16,7 +16,7 @@
     <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand mt-3">
+                <li class="sidebar-brand">
                     <h3 href="view.php">
                         Aotlie Service
                     </h3>
@@ -31,7 +31,7 @@
                     <a href="{{asset('admin/mobil')}}">Mobil</a>
                 </li>
                 <li>
-                    <a href="{{asset('')}}">Log Out</a>
+                    <a href="{{route('logout')}}">Log Out</a>
                 </li>
             </ul>
         </div>
@@ -50,8 +50,8 @@
             @csrf
             @method('PUT')
 			<div class="mb-3">
-                <label for="ID_Customer" class="form-label">ID_Customer</label>
-                <input type="text" class="form-control" id="ID_Customer"  name="ID_Customer" value="{{ old('ID_Customer', $customer->ID_Customer) }}">
+                <label for="ID_customer" class="form-label">ID_Customer</label>
+                <p>{{  $customer->ID_customer }}</p>
             </div>
             <div class="mb-3">
                <label for="Nama" class="form-label">Nama</label>

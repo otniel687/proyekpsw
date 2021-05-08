@@ -34,7 +34,7 @@
                     <a href="{{asset('admin/mobil')}}">Mobil</a>
                 </li>
                 <li>
-                    <a href="{{asset('')}}">Log Out</a>
+                    <a href="{{route('logout')}}">Log Out</a>
                 </li>
             </ul>
         </div>
@@ -71,11 +71,11 @@
             </div>
             <div class="mb-3">
                 <label for="stnk" class="form-label">No. STNK</label>
-                <input class="form-control" id="stnk" name="stnk" placeholder="Input Keluhan Mobil">
+                <input class="form-control" id="stnk" name="stnk" placeholder="Masukkan No. STNK Mobil">
             </div>
             <div class="mb-3">
                 <label for="keluhan" class="form-label">Keluhan</label>
-                 <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" rows="5" placeholder="Masukkan Konten Blog">{{ old('keluhan') }}</textarea>
+                 <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" rows="5" placeholder="Masukkan Keluhan Mobil">{{ old('keluhan') }}</textarea>
             </div>
             <div class="text-center">
                 <button class="btn btn-danger text-white" type="reset" name="submit">Reset</button>

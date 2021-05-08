@@ -35,7 +35,7 @@
                     <a href="{{asset('admin/mobil')}}">Mobil</a>
                 </li>
                 <li>
-                    <a href="{{asset('')}}">Log Out</a>
+                    <a href="{{route('logout')}}">Log Out</a>
                 </li>
             </ul>
         </div>

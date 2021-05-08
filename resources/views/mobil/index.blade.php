@@ -32,7 +32,7 @@
                     <a href="{{asset('admin/mobil')}}">Mobil</a>
                 </li>
                 <li>
-                    <a href="{{asset('')}}">Log Out</a>
+                    <a href="{{route('logout')}}">Log Out</a>
                 </li>
             </ul>
         </div>
@@ -78,7 +78,20 @@
 			</tr>
 			@endforeach
         </table>
+        </div>
+        {{-- <div class="pull-left">
+        showing
+        {{ $mobils->firstItem()}}
+        to 
+        {{ $mobils->lastitem()}}
+        of
+        {{ $mobils->total() }}
+        entries
+    </div> --}}
+    <div class="d-flex justify-content-end">
+        {{ $mobils->links() }}
     </div>
+
 </div>
 <script src="{{asset('js/jquery.js')}} "></script>
     <script src="{{asset('js/bootstrap.min.js')}} "></script>

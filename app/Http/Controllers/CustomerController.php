@@ -10,10 +10,10 @@ class CustomerController extends Controller
 
     public function index()
     {
-         $customers = Customer::latest()->paginate(10);
+         $customers = Customer::latest()->simplePaginate(5);
 
         return view('customer.index',compact('customers'))
-            ->with('i',(request()->input('page',1) - 1) * 10);
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     public function create()
@@ -23,6 +23,14 @@ class CustomerController extends Controller
 
     public function store(Request $request)
     {
+        $id = Customer::getId();
+        foreach($id as $value);
+        $idlm = $value->id;
+        $idbaru = $idlm + 1;
+        $blt = date('d-m-y');
+
+        $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
+
         $this->validate($request,[
             'Nama'              =>  'required',
             'Alamat'            =>  'required',
@@ -30,7 +38,7 @@ class CustomerController extends Controller
         ]);
 
         $customer = Customer::create([
-            'ID_customer'       =>  'S00020--',
+            'ID_customer'       =>  $no_pengembalian,
             'Nama'              =>  $request->Nama,
             'Alamat'            =>  $request->Alamat,
             'NoTelp'            =>  $request->NoTelp
@@ -52,6 +60,14 @@ class CustomerController extends Controller
 
     public function update(Request $request, Customer $customer)
     {
+        $id = Customer::getId();
+        foreach($id as $value);
+        $idlm = $value->id;
+        $idbaru = $idlm + 1;
+        $blt = date('d-m-y');
+
+        $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
+
         $request->validate([
             'ID_customer'       =>  'required',
             'Nama'              =>  'required',
@@ -61,14 +77,14 @@ class CustomerController extends Controller
 
         Customer::where('id', $customer->id)
         ->update([
-            'ID_customer'       =>  'ID_customer',
+            'ID_customer'       =>  $request->$no_pengembalian,
             'Nama'              =>  $request->Nama,
             'Alamat'            =>  $request->Alamat,
             'NoTelp'            =>  $request->NoTelp
         ]);
 
-        return redirect()->route('customer.index')
-                        ->with('success','Data Berhasil Disimpan!');
+         return redirect()->route('customer.index')
+                        ->with('success','Data telah Ditambahkan');
     }
 
     public function destroy(Customer $customer)

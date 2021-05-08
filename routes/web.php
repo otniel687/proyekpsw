@@ -8,6 +8,7 @@ use App\Http\Controllers\MekanikController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\MobilController;
+use App\Http\Controllers\BookingController;
 
 
 /*
@@ -32,15 +33,15 @@ Route::get('/', function () {
 Route::get('/about', [AboutController::class,'tentang']);
 Route::get('/kontak', [AboutController::class, 'kontak']);
 Route::get('/service', [ServiceController::class, 'service']);
-Route::get('/registrasi', [AboutController::class,'regis']);
+// Route::get('/registrasi', [AboutController::class,'regis']);
 // Route::get('/login', [LoginController::class,'login']);
 // Route::get('/login/admin', [LoginController::class,'admin']);
 // Route::get('/login/customer', [LoginController::class,'customer']);
 // Route::get('/login/mekanik', [LoginController::class,'mekanik']);
 // Route::get('/login/regis', [LoginController::class,'regis']);
+Route::get('/registrasi', [BookingController::class, 'index'])->name('registrasi');
+Route::get('/registrasi', [BookingController::class, 'store'])->name('registrasi');
 
-Route::resource('admin/customer', CustomerController::class);
-Route::resource('admin/mobil', MobilController::class);
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
 Route::get('register', 'App\Http\Controllers\AuthController@register')->name('register');
 Route::post('simpanregister', 'App\Http\Controllers\AuthController@simpanregister')->name('simpanregister');
@@ -49,7 +50,9 @@ Route::get('logout', 'App\Http\Controllers\AuthController@logout')->name('logout
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cek_login:admin']], function () {
-        Route::resource('admin', AdminController::class);
+        // Route::resource('admin', AdminController::class);
+        Route::resource('admin/customer', CustomerController::class);
+        Route::resource('admin/mobil', MobilController::class);
     });
     Route::group(['middleware' => ['cek_login:pelanggan']], function () {
         Route::resource('pelanggan', PelangganController::class);

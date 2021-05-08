@@ -14,7 +14,7 @@ class AuthController extends Controller
     {
         if ($user = Auth::user()) {
             if ($user->level == 'admin') {
-                return redirect()->intended('admin');
+                return redirect('admin/customer');
             } elseif ($user->level == 'mekanik') {
                 return redirect()->intended('mekanik');
             } elseif ($user->level == 'pelanggan') {
@@ -37,7 +37,7 @@ class AuthController extends Controller
             if (Auth::attempt($kredensil)) {
                 $user = Auth::user();
                 if ($user->level == 'admin') {
-                    return redirect()->intended('admin');
+                    return redirect('admin/customer');
                 } elseif ($user->level == 'mekanik') {
                     return redirect()->intended('mekanik');
                 } elseif ($user->level == 'pelanggan') {

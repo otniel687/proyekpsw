@@ -36,7 +36,7 @@
                     <a href="{{asset('admin/mobil')}}">Mobil</a>
                 </li>
                 <li>
-                    <a href="{{asset('')}}">Log Out</a>
+                    <a href="{{route('logout')}}">Log Out</a>
                 </li>
             </ul>
         </div>
@@ -82,5 +82,19 @@
 			</tr>
 			@endforeach
         </table>
+    </div>
+    </div>
+     {{-- <div class="pull-left">
+        showing
+        {{ $customers->firstItem()}}
+        to 
+        {{ $customers->lastitem()}}
+        of
+        {{ $customers->total() }}
+        entries
+        </div> --}}
+        <div class="d-flex justify-content-end">
+           {{ $customers->onEachSide(1)->links() }}
+        </div>
 </body>
 </html>

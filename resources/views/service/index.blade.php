@@ -97,7 +97,7 @@
           <div class="col-lg-6 my-auto showcase-text">
             <h1>Pemasangan Audio Mobil</h1>
             <div class="mb-3">
-              <img src="https://img.icons8.com/pastel-glyph/64/000000/air-conditioner--v3 text-center.png style=" style="font-size: 70px" />
+              <img src="https://img.icons8.com/ios-filled/50/000000/high-volume--v1.png" style="font-size: 70px" />
             </div>
             <div class="info-panell d-flex align-center">
               <h4>

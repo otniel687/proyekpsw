@@ -56,50 +56,60 @@
 
           <div class="col-md-5" >
             <h3>Personal Information</h3>
-            <div>
-              <form action="" method="POST">
+              <form action="{{ route('store.booking') }}" method="POST">
+                @csrf
+                @if (session('status'))
+                  <div class="alert alert-success">
+                    {{session('status')}}
+                  </div>  
+                @endif
                 <div>
-                  <label for="nama" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="nama" name="nama" />
+                  <label for="Nama" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="Nama" name="Nama" />
                 </div>
                 <div>
-                  <label for="alamat" class="form-label">Alamat</label>
-                  <input type="text" class="form-control" id="alamat" name="alamat" />
+                  <label for="Alamat" class="form-label">Alamat</label>
+                  <input type="text" class="form-control" id="Alamat" name="Alamat" />
                 </div>
                 <div>
-                  <label for="no.handphone" class="form-label">No. Handphone</label>
-                  <input type="text" class="form-control" id="no.handphone" name="no.handphone" />
+                  <label for="NoTelp" class="form-label">No. Handphone</label>
+                  <input type="text" class="form-control" id="NoTelp" name="NoTelp" />
                   <h6>No. Handphone harus diawali dengan +62</h6>
                 </div>
-              </form>
-            </div>
+                <button type="reset" class="submit btn btn-light submit" name="submit" style="margin-right: 40px;">RESET</button>
+                <button type="submit" class="submit btn btn-primary submit" name="submit" style="margin-right: 40px">SUBMIT</button>
+
           </div>
           <div class="col-md-5" >
             <h3>Booking Information</h3>
             <div>
-              <form action="" method="POST">
+
                 <div>
-                  <label for="jenis" class="form-label">Jenis</label>
-                  <input type="text" class="form-control" id="jenis" name="jenis" />
+                  <label for="Jenis" class="form-label">Jenis Mobil</label>
+                  <input type="text" class="form-control" id="Jenis" name="Jenis" />
                 </div>
                 <div>
-                  <label for="merek" class="form-label">Merek</label>
-                  <input type="text" class="form-control" id="merek" name="merek" />
+                  <label for="Merek" class="form-label">Merek</label>
+                  <input type="text" class="form-control" id="Merek" name="Merek" />
                 </div>
                 <div>
-                  <label for="platnomor" class="form-label">Plat Nomor</label>
-                  <input type="text" class="form-control" id="platnomor" name="platnomor" />
+                  <label for="Plat_Nomor" class="form-label">Plat Nomor</label>
+                  <input type="text" class="form-control" id="Plat_Nomor" name="Plat_Nomor" />
+                </div>
+                <div>
+                  <label for="Pemilik" class="form-label">Pemilik Kendaraan</label>
+                  <input type="text" class="form-control" id="Pemilik" name="Pemilik" />
                 </div>
                 <div>
                   <label for="stnk" class="form-label">Atas Nama pada STNK</label>
                   <input type="text" class="form-control" id="stnk" name="stnk" />
                 </div>
                 <div>
-                  <label for="masalah" class="form-label">Masalah pada Mobil</label><br>
-                  <textarea id="masalah" name="masalah" class="deskripsi"></textarea>
+                  <label for="keluhan" class="form-label">Masalah pada Mobil</label><br>
+                  <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" rows="5" placeholder="Masukkan Keluhan Mobil">{{ old('keluhan') }}</textarea>
                 </div>
                 <br />
-                <button type="submit" class="submit btn btn-light submit" name="submit" style="margin-right: 40px;">RESET</button>
+                <button type="reset" class="submit btn btn-light submit" name="submit" style="margin-right: 40px;">RESET</button>
                 <button type="submit" class="submit btn btn-primary submit" name="submit" style="margin-right: 40px">SUBMIT</button>
               </form>
             </div>

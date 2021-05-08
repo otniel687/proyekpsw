@@ -10,10 +10,10 @@ class MobilController extends Controller
 
     public function index()
     {
-        $mobils = Mobil::latest()->paginate(10);
+        $mobils = Mobil::latest()->simplePaginate(5);
 
         return view('mobil.index',compact('mobils'))
-            ->with('i',(request()->input('page',1) - 1) * 10);
+            ->with('i',(request()->input('page',1) - 1) * 5);
     }
 
     public function create()
@@ -23,17 +23,25 @@ class MobilController extends Controller
 
     public function store(Request $request)
     {
+        $id = Mobil::getId();
+        foreach($id as $value);
+        $idlm = $value->id;
+        $idbaru = $idlm + 1;
+        $blt = date('d-m-y');
+
+        $no_pengembalian = 'MBL/'.$blt.'/'.$idbaru;
+
          $this->validate($request,[
             'Jenis'            =>  'required',
             'Merek'            =>  'required',
             'Plat_Nomor'       =>  'required',
-            'Pemilik'         =>  'required',
+            'Pemilik'         =>   'required',
             'stnk'             =>  'required',
             'keluhan'          =>  'required'
         ]);
 
         $mobil = Mobil::create([
-            'ID_Registrasi'     =>  'S00020--',
+            'ID_Registrasi'     =>  $no_pengembalian,
             'Jenis'             =>  $request->Jenis,
             'Merek'             =>  $request->Merek,
             'Plat_Nomor'        =>  $request->Plat_Nomor,
@@ -58,6 +66,14 @@ class MobilController extends Controller
 
     public function update(Request $request, Mobil $mobil)
     {
+        $id = Mobil::getId();
+        foreach($id as $value);
+        $idlm = $value->id;
+        $idbaru = $idlm + 1;
+        $blt = date('d-m-y');
+
+        $no_pengembalian = 'MBL/'.$blt.'/'.$idbaru;
+
          $request->validate([
             'Jenis'            =>  'required',
             'Merek'            =>  'required',
@@ -69,7 +85,7 @@ class MobilController extends Controller
 
         Mobil::where('id', $mobil->id)
         ->update([
-          'ID_Registrasi'     =>  'S00020--',
+          'ID_Registrasi'       =>  $no_pengembalian,
             'Jenis'             =>  $request->Jenis,
             'Merek'             =>  $request->Merek,
             'Plat_Nomor'        =>  $request->Plat_Nomor,
