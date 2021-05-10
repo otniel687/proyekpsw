@@ -50,7 +50,7 @@ class AuthController extends Controller
                                 ->withInput()
                                 ->withErrors(['login_gagal' => 'These credentials do not match our records.']);
     }
-    
+
     public function register(){
         return view('registrasi');
     }

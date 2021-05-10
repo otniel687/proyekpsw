@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MekanikController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\CustomerController;
@@ -27,7 +26,7 @@ Route::get('/', function () {
 });
 
 // Route::get('/regis', function () {
-//     return view('regitrasi');
+//     return view('regitrasi.registration');
 // });
 // Route::get('/kontak', 'App\Http\Controllers\KontakController@kontak');
 Route::get('/about', [AboutController::class,'tentang']);
@@ -40,7 +39,7 @@ Route::get('/service', [ServiceController::class, 'service']);
 // Route::get('/login/mekanik', [LoginController::class,'mekanik']);
 // Route::get('/login/regis', [LoginController::class,'regis']);
 Route::get('/registrasi', [BookingController::class, 'index'])->name('registrasi');
-Route::get('/registrasi', [BookingController::class, 'store'])->name('registrasi');
+Route::post('/booking', [BookingController::class, 'store'])->name('registrasi');
 
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
 Route::get('register', 'App\Http\Controllers\AuthController@register')->name('register');

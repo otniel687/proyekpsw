@@ -1,23 +1,18 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Daftar Customer</title>
+    <title>Daftar Data Mobil</title>
     <link href="{{asset('css/bootstrap.min.css')}} " rel="stylesheet">
     <link href="{{asset('css/simple-sidebar.css')}} " rel="stylesheet">
     <a href="https://icons8.com/icon/he8U4VPWGpWe/"></a>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <script src="https://kit.fontawesome.com/881c7896df.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
-
 <body>
     <div id="wrapper">
         <div id="sidebar-wrapper">
@@ -29,9 +24,6 @@
                 </li>
                  <li>
                     <a href="{{asset('/')}} ">Home</a>
-                </li>
-                <li>
-                    <a href="{{asset('admin/customer')}}">Customer</a>
                 </li>
                 <li>
                     <a href="{{asset('admin/mobil')}}">Mobil</a>
@@ -46,58 +38,55 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
-                        <h1>Data Customer Aotlie Service</h1>
+                        <h1>Data Mobil Aotlie Service</h1>
                     </div>
                 </div>
             </div>
             <br><br>
             <div class="containerr mt-1">
-			<a href="{{ route('customer.create') }}" class="btn btn-outline-info">+ Customer Baru</a>
-    <div class="row">
         <table class="table">
             <thead>
                 <tr>
-					<th>No</th>
-                    <th>ID Customer</th>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>No Telepon</th>
+                    <th>No</th>
+                    <th>ID Mobil</th>
+                    <th>Jenis</th>
+                    <th>Merek</th>
+                    <th>Plat Mobil</th>
                     <th>Action</th>
                 </tr>
             </thead>
-            @foreach ($customers as $customer)
+            @foreach ($mobils as $mobil)
 				<tr>
 					<td>{{++$i }} </td>
-					<td>{{$customer->ID_customer}} </td>
-					<td>{{$customer->Nama}} </td>
-					<td>{{$customer->Alamat}} </td>
-					<td>{{$customer->NoTelp}} </td>
+					<td>{{$mobil->ID_Registrasi}} </td>
+					<td>{{$mobil->Jenis}} </td>
+					<td>{{$mobil->Merek}} </td>
+					<td>{{$mobil->Plat_Nomor}} </td>
 					<td>
-					<form action="{{route('customer.show',$customer->id)}}" method="POST" >
-					<a class="btn btn-primary" href="{{route('customer.edit',$customer->id)}} ">Edit</a>
-					@csrf
-					@method('DELETE')
-					<button type="submit" class="btn btn-danger">Delete</button>
+					<form action="{{route('mekanik.show',$mobil->id)}}" method="POST" >
+                    @csrf
+					<a class="btn btn-info btn-sm" href="{{ route('mekanik.show',$mobil->id) }}">Show</a>
 					</form>
 				</td>
 			</tr>
 			@endforeach
         </table>
-    </div>
-    </div>
-     {{-- <div class="pull-left">
-        showing
-        {{ $customers->firstItem()}}
-        to 
-        {{ $customers->lastitem()}}
-        of
-        {{ $customers->total() }}
-        entries
-        </div> --}}
-        <div class="d-flex justify-content-end">
-           {{ $customers->onEachSide(1)->links() }}
         </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {{-- <div class="pull-left">
+        showing
+        {{ $mobils->firstItem()}}
+        to 
+        {{ $mobils->lastitem()}}
+        of
+        {{ $mobils->total() }}
+        entries
+    </div> --}}
+    <div class="d-flex justify-content-end">
+        {{ $mobils->links() }}
+    </div>
+
+</div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
@@ -113,8 +102,8 @@
             
         @endif
     </script>
-    <script src="{{asset('js/jquery.js')}} "></script>
-    <script src="{{asset('js/bootstrap.min.js')}} "></script>
+<script src="{{asset('js/jquery.js')}} "></script>
+<script src="{{asset('js/bootstrap.min.js')}} "></script>
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -122,4 +111,4 @@
     });
     </script>
 </body>
-</html>
+<html>

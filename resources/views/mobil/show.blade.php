@@ -76,15 +76,15 @@
         </div>
         <div class="mb-3">
             <label for="keluhan" class="form-label"><strong>Masalah dalam Mobil</strong> </label>
-            <p class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ $mobil->keluhan }}}</p>
+            <p class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ $mobil->keluhan }}</p>
         </div>
     </form>
     </table>
     </div>
 </div>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+ <script src="{{asset('js/jquery.js')}} "></script>
+<script src="{{asset('js/bootstrap.min.js')}} "></script>
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();

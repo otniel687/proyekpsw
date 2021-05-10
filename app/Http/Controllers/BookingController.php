@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Mobil;
 
-
 class BookingController extends Controller
 {
     public function index()
@@ -16,6 +15,7 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
+        $data = $request->all();
         $id = Customer::getId();
         foreach($id as $value);
         $idlm = $value->id;
@@ -24,10 +24,10 @@ class BookingController extends Controller
 
         $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
 
-        $data = $request->all();
         // dd($data);
+        
         $customer = new Customer;
-        $customer->id = $data['id'];
+        $customer->ID_customer = $no_pengembalian; 
         $customer->Nama = $data['Nama'];
         $customer->Alamat = $data['Alamat'];
         $customer->NoTelp = $data['NoTelp'];
@@ -42,7 +42,7 @@ class BookingController extends Controller
         $no_pengembalian = 'MBL/'.$blt.'/'.$idbaru;
 
         $mobil = new Mobil;
-        $mobil->id = $customer->id;
+        $mobil->ID_Registrasi = $no_pengembalian;
         $mobil->Jenis = $data['Jenis'];
         $mobil->Merek = $data['Merek'];
         $mobil->Plat_Nomor = $data['Plat_Nomor'];
@@ -51,7 +51,8 @@ class BookingController extends Controller
         $mobil->keluhan = $data['keluhan'];
         $mobil->save();
 
-        return redirect()->back()->with('status','Data Berahasil Dimasukkan');
+        return redirect()->back()->with('status','Data Berhasil Dimasukkan');
+        
     }
 }
 

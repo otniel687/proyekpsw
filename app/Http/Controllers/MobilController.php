@@ -51,7 +51,7 @@ class MobilController extends Controller
             ]);
         
         return redirect()->route('mobil.index')
-                        ->with('success','Data telah Ditambahkan');
+                        ->with(['success' => 'Data telah Ditambahkan']);
     }
 
     public function show(Mobil $mobil)
@@ -95,7 +95,7 @@ class MobilController extends Controller
         ]);
 
         return redirect()->route('mobil.index')
-                        ->with('success','Data Berhasil Disimpan!');
+                      ->with(['success' => 'Data telah Diubah']);
     }
 
     public function destroy(Mobil $mobil)
@@ -103,6 +103,6 @@ class MobilController extends Controller
         $mobil->delete();
 
         return redirect()->route('mobil.index')
-                        ->with('success','Kuliah Berhasil Dihapus');
+                         ->with(['success' => 'Data telah Dihapus']);
     }
 }

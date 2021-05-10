@@ -44,19 +44,16 @@
         </div>
       </nav>
     </header>
-
     <br />
     <div class="container judul">
       <h2>&nbsp;Booking Service</h2>
     </div>
     <div class="container">
-      <section class="regis ">
-        
+      <section class="regis ">        
         <div class="row" >
-
           <div class="col-md-5" >
             <h3>Personal Information</h3>
-              <form action="{{ route('store.booking') }}" method="POST">
+              <form action="/booking" method="POST">
                 @csrf
                 @if (session('status'))
                   <div class="alert alert-success">
@@ -74,16 +71,11 @@
                 <div>
                   <label for="NoTelp" class="form-label">No. Handphone</label>
                   <input type="text" class="form-control" id="NoTelp" name="NoTelp" />
-                  <h6>No. Handphone harus diawali dengan +62</h6>
                 </div>
-                <button type="reset" class="submit btn btn-light submit" name="submit" style="margin-right: 40px;">RESET</button>
-                <button type="submit" class="submit btn btn-primary submit" name="submit" style="margin-right: 40px">SUBMIT</button>
-
           </div>
           <div class="col-md-5" >
             <h3>Booking Information</h3>
             <div>
-
                 <div>
                   <label for="Jenis" class="form-label">Jenis Mobil</label>
                   <input type="text" class="form-control" id="Jenis" name="Jenis" />
@@ -106,18 +98,18 @@
                 </div>
                 <div>
                   <label for="keluhan" class="form-label">Masalah pada Mobil</label><br>
-                  <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" rows="5" placeholder="Masukkan Keluhan Mobil">{{ old('keluhan') }}</textarea>
+                  <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" rows="10" >{{ old('keluhan') }}</textarea>
                 </div>
                 <br />
                 <button type="reset" class="submit btn btn-light submit" name="submit" style="margin-right: 40px;">RESET</button>
                 <button type="submit" class="submit btn btn-primary submit" name="submit" style="margin-right: 40px">SUBMIT</button>
+                
               </form>
             </div>
           </div>
         </div>
-
       </section>
-              </div>
+      </div>
     </div>
   </body>
 </html>

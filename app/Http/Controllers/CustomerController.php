@@ -42,7 +42,7 @@ class CustomerController extends Controller
             'Nama'              =>  $request->Nama,
             'Alamat'            =>  $request->Alamat,
             'NoTelp'            =>  $request->NoTelp
-            ]);
+        ]);
         
         return redirect()->route('customer.index')
                         ->with('success','Data telah Ditambahkan');
@@ -92,6 +92,6 @@ class CustomerController extends Controller
         $customer->delete();
 
         return redirect()->route('customer.index')
-                        ->with('success','Kuliah Berhasil Dihapus');
+                        ->with('success','Data Berhasil Dihapus');
     }
 }

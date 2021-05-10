@@ -13,9 +13,10 @@ class PelangganController extends Controller
     // {
     //     $this->middleware('customer');
     // }
+
     public function index()
     {
-        return ('Halaman ini untuk Customer');
+        return redirect('/registrasi');
     }
 
 
