@@ -43,7 +43,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                         <h1>Tambahkan Data Mobil</h1>
                     </div>
                 </div>

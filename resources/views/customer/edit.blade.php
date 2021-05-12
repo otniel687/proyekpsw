@@ -39,7 +39,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                         <h1>Isi data di bawah ini!</h1>
                     </div>
                 </div>
@@ -73,13 +72,5 @@
     </div>
     </div>
     </div>
-    <script src="{{asset('js/jquery.js')}} "></script>
-    <script src="{{asset('js/bootstrap.min.js')}} "></script>
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
 </body>
 </html>

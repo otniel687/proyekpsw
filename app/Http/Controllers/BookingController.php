@@ -25,7 +25,12 @@ class BookingController extends Controller
         $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
 
         // dd($data);
-        
+        $this->validate($request,[
+            'Nama'              =>  'required',
+            'Alamat'            =>  'required',
+            'NoTelp'            =>  'required'
+        ]);
+
         $customer = new Customer;
         $customer->ID_customer = $no_pengembalian; 
         $customer->Nama = $data['Nama'];
@@ -41,6 +46,15 @@ class BookingController extends Controller
 
         $no_pengembalian = 'MBL/'.$blt.'/'.$idbaru;
 
+        $this->validate($request,[
+            'Jenis'            =>  'required',
+            'Merek'            =>  'required',
+            'Plat_Nomor'       =>  'required',
+            'Pemilik'         =>   'required',
+            'stnk'             =>  'required',
+            'keluhan'          =>  'required'
+        ]);
+
         $mobil = new Mobil;
         $mobil->ID_Registrasi = $no_pengembalian;
         $mobil->Jenis = $data['Jenis'];
@@ -52,7 +66,7 @@ class BookingController extends Controller
         $mobil->save();
 
         return redirect()->back()->with('status','Data Berhasil Dimasukkan');
-        
+
     }
 }
 

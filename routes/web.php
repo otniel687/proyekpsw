@@ -38,9 +38,8 @@ Route::get('/service', [ServiceController::class, 'service']);
 // Route::get('/login/customer', [LoginController::class,'customer']);
 // Route::get('/login/mekanik', [LoginController::class,'mekanik']);
 // Route::get('/login/regis', [LoginController::class,'regis']);
-Route::get('/registrasi', [BookingController::class, 'index'])->name('registrasi');
-Route::post('/booking', [BookingController::class, 'store'])->name('registrasi');
 
+Route::get('/registrasi', [BookingController::class, 'index'])->name('registrasi');
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
 Route::get('register', 'App\Http\Controllers\AuthController@register')->name('register');
 Route::post('simpanregister', 'App\Http\Controllers\AuthController@simpanregister')->name('simpanregister');
@@ -55,6 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::group(['middleware' => ['cek_login:pelanggan']], function () {
         Route::resource('pelanggan', PelangganController::class);
+        Route::post('/booking', [BookingController::class, 'store'])->name('registrasi');
     });
     Route::group(['middleware' => ['cek_login:mekanik']], function () {
         Route::resource('mekanik', MekanikController::class);

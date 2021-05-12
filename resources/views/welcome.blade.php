@@ -59,7 +59,7 @@
       <div class="container">
         <div class="masthead-subheading">Jujur, Berkualitas dan Terjangkau</div>
         <div class="masthead-heading text-uppercase">Menjamin kenyamanan Anda</div>
-        <a class="btn btn-primary btn-xl text-uppercase tekan" href="{{asset('login')}} ">Mari Bergabung</a>
+        <a class="btn btn-primary btn-xl text-uppercase tekan" href="{{asset('/registrasi')}} ">Mari Bergabung</a>
       </div>
     </header>
 

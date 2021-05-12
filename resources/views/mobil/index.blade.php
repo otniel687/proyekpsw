@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
     <script src="https://kit.fontawesome.com/881c7896df.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body>
     <div id="wrapper">
@@ -72,22 +73,13 @@
 					<a class="btn btn-info btn-sm" href="{{ route('mobil.show',$mobil->id) }}">Show</a>
 					<a class="btn btn-primary" href="{{route('mobil.edit',$mobil->id)}} ">Edit</a>
 					@method('DELETE')
-					<button type="submit" class="btn btn-danger">Delete</button>
+					<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
 					</form>
 				</td>
 			</tr>
 			@endforeach
         </table>
         </div>
-        {{-- <div class="pull-left">
-        showing
-        {{ $mobils->firstItem()}}
-        to 
-        {{ $mobils->lastitem()}}
-        of
-        {{ $mobils->total() }}
-        entries
-    </div> --}}
     <div class="d-flex justify-content-end">
         {{ $mobils->links() }}
     </div>

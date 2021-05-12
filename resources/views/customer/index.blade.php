@@ -77,7 +77,7 @@
 					<a class="btn btn-primary" href="{{route('customer.edit',$customer->id)}} ">Edit</a>
 					@csrf
 					@method('DELETE')
-					<button type="submit" class="btn btn-danger">Delete</button>
+					<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
 					</form>
 				</td>
 			</tr>
@@ -85,18 +85,9 @@
         </table>
     </div>
     </div>
-     {{-- <div class="pull-left">
-        showing
-        {{ $customers->firstItem()}}
-        to 
-        {{ $customers->lastitem()}}
-        of
-        {{ $customers->total() }}
-        entries
-        </div> --}}
-        <div class="d-flex justify-content-end">
-           {{ $customers->onEachSide(1)->links() }}
-        </div>
+    <div class="d-flex justify-content-end">
+        {{ $customers->links()}}
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -104,13 +95,13 @@
     <script>
         //message with toastr
         @if(session()-> has('success'))
-        
-            toastr.success('{{ session('success') }}', 'BERHASIL!'); 
+
+            toastr.success('{{ session('success') }}', 'BERHASIL!');
 
         @elseif(session()-> has('error'))
 
             toastr.error('{{ session('error') }}', 'GAGAL!'); 
-            
+
         @endif
     </script>
     <script src="{{asset('js/jquery.js')}} "></script>

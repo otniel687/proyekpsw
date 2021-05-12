@@ -1,351 +1,357 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 body {
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  padding: 0;
-  width: 100%;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding: 0;
+    width: 100%;
 }
 li {
-  list-style: none;
+    list-style: none;
 }
 textarea {
-  height: 150px;
+    height: 150px;
 }
 
 .navbar-inverse {
-  background-color: #29bfb6;
+    background-color: #29bfb6;
 }
 
 .navbar-inverse h1 {
-  font-family: "Alfa Slab One", cursive;
+    font-family: "Alfa Slab One", cursive;
 }
 #promot {
-  padding-bottom: 12rem;
+    padding-bottom: 12rem;
 }
 
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
-  text-align: center;
-  /* color: #000;
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    /* color: #000;
   text-shadow: 2px 2px 2px rgb(253, 253, 255); */
-  background-image: url("Image/header.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+    background-image: url("Image/header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
 }
 header.masthead .masthead-subheading {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #000;
-  text-shadow: 2px 2px 2px rgb(253, 253, 255);
-  line-height: 1.5rem;
-  margin-bottom: 25px;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #000;
+    text-shadow: 2px 2px 2px rgb(253, 253, 255);
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
-  font-size: 3.25rem;
-  font-weight: 700;
-  color: #000;
-  text-shadow: 2px 2px 2px rgb(253, 253, 255);
-  line-height: 3.25rem;
-  margin-bottom: 2rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 2px 2px 2px rgb(253, 253, 255);
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 header.masthead .tekan {
-  width: 250px;
-  height: 40px;
-  align-items: center;
+    width: 250px;
+    height: 40px;
+    align-items: center;
 }
 @media (min-width: 768px) {
-  header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
-  }
-  header.masthead .masthead-subheading {
-    font-size: 2.25rem;
-    font-style: italic;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
-  }
-  header.masthead .masthead-heading {
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 4.5rem;
-    margin-bottom: 4rem;
-  }
+    header.masthead {
+        padding-top: 17rem;
+        padding-bottom: 12.5rem;
+    }
+    header.masthead .masthead-subheading {
+        font-size: 2.25rem;
+        font-style: italic;
+        line-height: 2.25rem;
+        margin-bottom: 2rem;
+    }
+    header.masthead .masthead-heading {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .showcase .showcase-text {
-  padding: 3rem;
+    padding: 3rem;
 }
 .showcase .showcase-img {
-  min-height: 30rem;
-  background-size: cover;
+    min-height: 30rem;
+    background-size: cover;
 }
 @media (min-width: 768px) {
-  .showcase .showcase-text {
-    padding: 7rem;
-  }
+    .showcase .showcase-text {
+        padding: 7rem;
+    }
 }
 
 .tab {
-  display: inline-block;
-  margin-left: 40px;
+    display: inline-block;
+    margin-left: 40px;
 }
 
 #footer .container .row ul li a {
-  color: #ffff;
-  text-decoration: none;
+    color: #ffff;
+    text-decoration: none;
 }
 
 #footer .container .row .col-md-3 a i {
-  color: #ffff;
-  font-size: 2rem;
+    color: #ffff;
+    font-size: 2rem;
 }
 
 a i {
-  color: #ffff;
-  font-size: 2rem;
+    color: #ffff;
+    font-size: 2rem;
 }
 
 .item {
-  transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 .item:hover {
-  filter: brightness(60%);
+    filter: brightness(60%);
 }
 
 .container {
-  max-width: 960px;
+    max-width: 960px;
 }
 
 .img-fluib {
-  transition: all ease-in-out 0.6s;
-  width: 800px;
-  height: 400px;
+    transition: all ease-in-out 0.6s;
+    width: 800px;
+    height: 400px;
 }
 
 .img-fluib:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .figure {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .tombol {
-  text-transform: uppercase;
-  border-radius: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
 }
 
 .info-panel {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  margin-top: 80px;
-  padding: 30px;
-  margin-left: 60px;
-  background-color: #1a837c;
-  color: black;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 80px;
+    padding: 30px;
+    margin-left: 60px;
+    background-color: #1a837c;
+    color: black;
 }
 
 .info-panel2 {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  margin-top: 80px;
-  padding: 30px;
-  margin-left: 60px;
-  background-color: #ffffff;
-  color: black;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 80px;
+    padding: 30px;
+    margin-left: 60px;
+    background-color: #ffffff;
+    color: black;
 }
 
 .info-panal {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  margin-top: 80px;
-  padding: 30px;
-  margin-left: 60px;
-  background-color: #c4c4c4;
-  color: black;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 80px;
+    padding: 30px;
+    margin-left: 60px;
+    background-color: #c4c4c4;
+    color: black;
 }
 
 .pagging {
-  margin-top: 30px;
-  border: 2px solid rgb(240, 240, 240);
-  background-color: #bebbbb94;
-  border-radius: 10px;
+    margin-top: 30px;
+    border: 2px solid rgb(240, 240, 240);
+    background-color: #bebbbb94;
+    border-radius: 10px;
 }
 
 .textgambar {
-  color: white;
-  position: relative;
-  bottom: 40px;
-  left: 110px;
+    color: white;
+    position: relative;
+    bottom: 40px;
+    left: 110px;
 }
 
 /*Alfredo*/
 
 /*Alfredo*/
 .kuntul {
-  background-color: #29bfb6;
-  height: 55px;
-  width: 130px;
-  border-radius: 10px;
-  align-content: center;
-  margin-bottom: 80px;
+    background-color: #29bfb6;
+    height: 55px;
+    width: 130px;
+    border-radius: 10px;
+    align-content: center;
+    margin-bottom: 80px;
 }
 
 /*Laksamana*/
 .info-panel2 {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  margin-top: 80px;
-  padding: 30px;
-  margin-left: 60px;
-  background-color: #ffffff;
-  color: black;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 80px;
+    padding: 30px;
+    margin-left: 60px;
+    background-color: #ffffff;
+    color: black;
 }
 
 /*Alfredo*/
 .info-panell {
-  border-radius: 10px;
-  background-color: rgb(251, 255, 0);
-  height: 100px;
-  width: 350px;
-  align-items: center;
+    border-radius: 10px;
+    background-color: rgb(251, 255, 0);
+    height: 100px;
+    width: 350px;
+    align-items: center;
 }
 /*Alfredo*/
 .iconservice {
-  height: 50px;
-  width: 150px;
-  margin-left: 60px;
-  margin-top: 80px;
-  float: right;
-  margin-right: 300px;
+    height: 50px;
+    width: 150px;
+    margin-left: 60px;
+    margin-top: 80px;
+    float: right;
+    margin-right: 300px;
 }
 /*Alfredo*/
 .info-paneel {
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  width: 500px;
-  height: 300;
-  padding: 45px;
-  margin-left: 60px;
-  background-color: #9a9e9e;
-  color: black;
-  float: left;
-  margin-bottom: 50px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 500px;
+    height: 300;
+    padding: 45px;
+    margin-left: 60px;
+    background-color: #9a9e9e;
+    color: black;
+    float: left;
+    margin-bottom: 50px;
 }
 h2 {
-  color: black;
+    color: black;
 }
 /*Alfredo*/
 h4 {
-  color: black;
+    color: black;
 }
 
 /*Alfredo*/
 h3 {
-  color: black;
+    color: black;
 }
 
 /*Alfredo*/
 .img-infopaneel {
-  border-radius: 12px;
+    border-radius: 12px;
 }
 
 /*Eladita*/
 .login {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 50px 50px;
-  width: 300px;
-  height: 300px;
-  border-radius: 15px;
-  background: url("Image/background.jpeg");
-  box-shadow: 0 0 10px white;
-  font-style: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background: url("Image/background.jpeg");
+    box-shadow: 0 0 10px white;
+    font-style: bold;
 }
 
 /*Eladita*/
 .register {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 50px 50px;
-  width: 400px;
-  height: 450px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px white;
-  font-style: bold;
-  background-color: #bebbbb94;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 50px;
+    width: 400px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px white;
+    font-style: bold;
+    background-color: #bebbbb94;
 }
 
 /*Eladita*/
 .button b {
-  text-decoration: none;
-  color: black;
-  font-style: bold;
-  background-color: #29bfb6;
-  width: 100px;
-  padding: 5px 10px;
-  margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-style: bold;
+    background-color: #29bfb6;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 5px;
 }
 
 /*Eladita*/
 .form-text {
-  font-size: small;
-  font-style: italic;
+    font-size: small;
+    font-style: italic;
 }
 
 /*Eladita*/
 .regis .form-control {
-  width: 400px;
-  height: 30px;
-  border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
 }
 
 /*Eladita*/
 .register h2 {
-  text-align: center;
-  font-style: bold;
-  background-color: #29bfb6;
-  border-radius: 100px;
+    text-align: center;
+    font-style: bold;
+    background-color: #29bfb6;
+    border-radius: 100px;
 }
 
 .button a {
-  text-decoration: none;
-  color: black;
-  font-style: bold;
-  background-color: #29bfb6;
-  width: 100px;
-  padding: 5px 10px;
-  margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-style: bold;
+    background-color: #29bfb6;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 5px;
 }
 
 .button b {
-  text-decoration: none;
-  color: black;
-  font-style: bold;
-  background-color: #29bfb6;
-  width: 100px;
-  padding: 5px 10px;
-  margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-style: bold;
+    background-color: #29bfb6;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 5px;
 }
 .form_text {
-  font-size: small;
-  font-style: italic;
+    font-size: small;
+    font-style: italic;
 }
 
 .form_control {
-  width: 200px;
-  height: 20px;
-  border-radius: 5px;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
 }
 
 /* 
@@ -358,130 +364,134 @@ h3 {
 } */
 
 .textgambar h4 {
-  color: #ffff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
+    color: #ffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 6);
 }
 
 .regis {
-  color: black;
-  border-radius: 12px;
-  /* background-color: #29bfb6; */
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: #06302e;
-  background-image: url("Image/map-image.png");
-  background-repeat: no-repeat;
-  background-position: center;
+    color: black;
+    border-radius: 12px;
+    /* background-color: #29bfb6; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #06302e;
+    background-image: url("Image/map-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .regis .row {
-  margin-bottom: 300px;
+    margin-bottom: 300px;
 }
 
 .regis .col-md-5 {
-  margin: 40px;
+    margin: 40px;
 }
 
 .regis .col-md-6 {
-  margin-top: 40px;
-  margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 .regis .submit {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 .regis label,
 .regis h3,
-.regis h6 {
-  color: #ffff;
+.regis h6,
+.regis p {
+    color: #ffff;
+}
+.regis textarea {
+    height: 30px;
 }
 
 .pilihan {
-  width: 400px;
-  height: 37px;
-  border-radius: 4px;
+    width: 400px;
+    height: 37px;
+    border-radius: 4px;
 }
 
 .call-to-action img {
-  width: 455px;
-  height: 250px;
-  border-radius: 20px;
+    width: 455px;
+    height: 250px;
+    border-radius: 20px;
 }
 
 .deskripsi {
-  border-radius: 5px;
-  width: 400px;
+    border-radius: 5px;
+    width: 400px;
 }
 
 .submit {
-  float: right;
-  border-radius: 14px;
-  width: 90px;
+    float: right;
+    border-radius: 14px;
+    width: 90px;
 }
 
 .servis,
 .masalah {
-  width: 400px;
-  height: 30px;
-  border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
 }
 .judul h2 {
-  margin-bottom: 40px;
-  background-color: #29bfb6;
-  width: 280px;
-  height: 45px;
-  border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #29bfb6;
+    width: 280px;
+    height: 45px;
+    border-radius: 10px;
 }
 
 .sebagai {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 50px 50px;
-  width: 600px;
-  height: 400px;
-  border-radius: 15px;
-  background: url("Image/background.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100vh;
-  box-shadow: 0 0 10px white;
-  font-style: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 50px;
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+    background: url("Image/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    box-shadow: 0 0 10px white;
+    font-style: bold;
 }
 .valid .btn {
-  margin-top: 40px;
-  width: 300px;
-  margin-left: 20px;
+    margin-top: 40px;
+    width: 300px;
+    margin-left: 20px;
 }
 
 .form-signin {
-  width: 500px;
-  padding: 30px;
-  margin: auto;
+    width: 500px;
+    padding: 30px;
+    margin: auto;
 }
 .form-signin .checkbox {
-  font-weight: 400;
+    font-weight: 400;
 }
 .form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
 }
 .form-signin .form-control:focus {
-  z-index: 2;
+    z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 /* RESPONSIVE CSS
@@ -494,56 +504,56 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
 }
 
 @media (min-width: 1024px) {
 }
 
 @media (max-width: 992px) {
-  .gambarb .row .col-md-7 {
-    margin-left: 50px;
-  }
-  .regis {
-    height: 1000px;
-    align-content: center;
-    justify-content: center;
-  }
+    .gambarb .row .col-md-7 {
+        margin-left: 50px;
+    }
+    .regis {
+        height: 1000px;
+        align-content: center;
+        justify-content: center;
+    }
 }
 
 @media (max-height: 500px) {
 }
 
 @media (max-width: 768px) {
-  #promot img {
-    width: 520px;
-    height: 300px;
-  }
-  .regis {
-    height: 1000px;
-  }
+    #promot img {
+        width: 520px;
+        height: 300px;
+    }
+    .regis {
+        height: 1000px;
+    }
 }
 
 @-webkit-keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
+    0% {
+        transform: scale(0.6, 0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
 }
 
 @keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
+    0% {
+        transform: scale(0.6, 0.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
 }

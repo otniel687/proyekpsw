@@ -69,7 +69,6 @@ class CustomerController extends Controller
         $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
 
         $request->validate([
-            'ID_customer'       =>  'required',
             'Nama'              =>  'required',
             'Alamat'            =>  'required',
             'NoTelp'            =>  'required'
@@ -77,7 +76,7 @@ class CustomerController extends Controller
 
         Customer::where('id', $customer->id)
         ->update([
-            'ID_customer'       =>  $request->$no_pengembalian,
+            'ID_customer'       =>  $no_pengembalian,
             'Nama'              =>  $request->Nama,
             'Alamat'            =>  $request->Alamat,
             'NoTelp'            =>  $request->NoTelp

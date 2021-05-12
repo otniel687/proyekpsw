@@ -44,7 +44,6 @@
       </div>
     </nav>
   </header>
-
   <div class="container">
     <H2><br>Informasi Singkat</H2><br>
     <div class="row pagging">

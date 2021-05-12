@@ -19,9 +19,10 @@ class AuthController extends Controller
                 return redirect()->intended('mekanik');
             } elseif ($user->level == 'pelanggan') {
                  return redirect()->intended('pelanggan');
-            }
+            } 
         }
         return view('login');
+        
     }
 
     public function proses_login(Request $request)

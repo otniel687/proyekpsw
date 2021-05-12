@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,64 +28,54 @@
                     <a href="{{asset('/')}} ">Home</a>
                 </li>
                 <li>
-                    <a href="{{asset('admin/mobil')}}">Mobil</a>
+                    <a href="{{asset('mekanik')}}">Mobil</a>
                 </li>
                 <li>
                     <a href="{{route('logout')}}">Log Out</a>
                 </li>
             </ul>
         </div>
-
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
-                        <h1>Data Mobil Aotlie Service</h1>
+                    <h1>Data Mobil Aotlie Service</h1>
                     </div>
                 </div>
             </div>
             <br><br>
     <div class="container">
-    <br><a href="{{asset('admin/mobil')}} " class="btn btn-warning">Kembali ke daftar Mobil</a><br><br>
-    <table>
-    <form action="" method="post" enctype="multipart/form-data" class="row">
-        <div class="mb-3">
-            <label for="Jenis" class="form-label"><strong>Jenis</strong></label><br>
-            <p>{{ $mobil->Jenis }}</p>
-        </div>
-        <div class="mb-3">
-            <label for="Merek" class="form-label"><strong>Merek</strong></label>
-            <p>{{ $mobil->Merek }}</p>
-        </div>
-        <div class="mb-3">
-            <label for="Plat_Nomor" class="form-label"><strong>Plat Nomor Kendaraan</strong> </label>
-            <p>{{ $mobil->Plat_Nomor }}</p>
-        </div>
-        <div class="mb-3">
-            <label for="Pemilik" class="form-label"><strong>Pemilik Kendaraan</strong> </label>
-            <p>{{ $mobil->Pemilik }}</p>
-        </div>
-        <div class="mb-3">
-            <label for="stnk" class="form-label"><strong>No. STNK</strong> </label>
-            <p >{{ $mobil->stnk }}</p>
-        </div>
-        <div class="mb-3">
-            <label for="keluhan" class="form-label"><strong>Masalah dalam Mobil</strong> </label>
-            <p class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ $mobil->keluhan }}</p>
-        </div>
-    </form>
-    </table>
+    <br><a href="{{asset('mekanik')}} " class="btn btn-warning">Kembali ke daftar Mobil</a><br><br>
+        <table>
+            <form action="" method="post" enctype="multipart/form-data" class="row">
+                <div class="mb-3">
+                    <label for="Jenis" class="form-label"><strong>Jenis</strong></label><br>
+                    <p>{{ $mobil->Jenis }}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="Merek" class="form-label"><strong>Merek</strong></label>
+                    <p>{{ $mobil->Merek }}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="Plat_Nomor" class="form-label"><strong>Plat Nomor Kendaraan</strong> </label>
+                    <p>{{ $mobil->Plat_Nomor }}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="Pemilik" class="form-label"><strong>Pemilik Kendaraan</strong> </label>
+                    <p>{{ $mobil->Pemilik }}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="stnk" class="form-label"><strong>No. STNK</strong> </label>
+                    <p >{{ $mobil->stnk }}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="keluhan" class="form-label"><strong>Masalah dalam Mobil</strong> </label>
+                    <p class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Blog">{{ $mobil->keluhan }}</p>
+                </div>
+            </form>
+        </table>
     </div>
 </div>
-    </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+</div>
 </body>
 </html>

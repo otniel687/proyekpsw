@@ -22,9 +22,6 @@
                     </h3>
                 </li>
                 <li>
-                    <a href="{{asset('/')}} ">Home</a>
-                </li>
-                <li>
                     <a href="{{asset('admin/customer')}}">Customer</a>
                 </li>
                 <li>
@@ -39,7 +36,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                         <h1>Isi data di bawah ini!</h1>
                     </div>
                 </div>
@@ -82,6 +78,21 @@
         </form>
     </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        //message with toastr
+        @if(session()-> has('success'))
+        
+            toastr.success('{{ session('success') }}', 'BERHASIL!'); 
+
+        @elseif(session()-> has('error'))
+
+            toastr.error('{{ session('error') }}', 'GAGAL!'); 
+            
+        @endif
+    </script>
      <script src="{{asset('js/jquery.js')}} "></script>
     <script>
     $("#menu-toggle").click(function(e) {

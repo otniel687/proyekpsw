@@ -26,7 +26,7 @@
                     <a href="{{asset('/')}} ">Home</a>
                 </li>
                 <li>
-                    <a href="{{asset('admin/mobil')}}">Mobil</a>
+                    <a href="{{asset('mekanik')}}">Mobil</a>
                 </li>
                 <li>
                     <a href="{{route('logout')}}">Log Out</a>
@@ -65,22 +65,13 @@
 					<td>
 					<form action="{{route('mekanik.show',$mobil->id)}}" method="POST" >
                     @csrf
-					<a class="btn btn-info btn-sm" href="{{ route('mekanik.show',$mobil->id) }}">Show</a>
-					</form>
+					<a class="btn btn-info btn-sm" href="{{ route('mekanik.show',$mobil->id) }}">Show</a>	
+                    </form>
 				</td>
 			</tr>
 			@endforeach
         </table>
         </div>
-        {{-- <div class="pull-left">
-        showing
-        {{ $mobils->firstItem()}}
-        to 
-        {{ $mobils->lastitem()}}
-        of
-        {{ $mobils->total() }}
-        entries
-    </div> --}}
     <div class="d-flex justify-content-end">
         {{ $mobils->links() }}
     </div>
