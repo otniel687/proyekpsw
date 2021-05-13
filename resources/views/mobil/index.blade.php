@@ -70,7 +70,7 @@
 					<td>
 					<form action="{{route('mobil.show',$mobil->id)}}" method="POST" >
                     @csrf
-					<a class="btn btn-info btn-sm" href="{{ route('mobil.show',$mobil->id) }}">Show</a>
+					<a class="btn btn-info " href="{{ route('mobil.show',$mobil->id) }}">Show</a>
 					<a class="btn btn-primary" href="{{route('mobil.edit',$mobil->id)}} ">Edit</a>
 					@method('DELETE')
 					<button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>

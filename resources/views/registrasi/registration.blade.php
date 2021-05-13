@@ -150,7 +150,7 @@
                 </div>
                 <div>
                   <label for="keluhan" class="form-label">Masalah pada Mobil</label><br>
-                  <textarea class="form-control @error('keluhan') is-invalid @enderror" name="keluhan" rows="10" >{{ old('keluhan') }}</textarea>
+                  <textarea class="form-control @error('keluhan') is-invalid @enderror deskripsi" name="keluhan" rows="10" >{{ old('keluhan') }}</textarea>
                   @error('keluhan')
                     <div class="alert alert-danger mt-1">
                         {{ $message }}

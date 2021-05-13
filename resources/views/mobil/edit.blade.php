@@ -21,6 +21,9 @@
                         Aotlie Service
                     </h3>
                 </li>
+                 <li>
+                    <a href="{{asset('/')}} ">Home</a>
+                </li>
                 <li>
                     <a href="{{asset('admin/customer')}}">Customer</a>
                 </li>
@@ -92,12 +95,4 @@
             toastr.error('{{ session('error') }}', 'GAGAL!'); 
             
         @endif
-    </script>
-     <script src="{{asset('js/jquery.js')}} "></script>
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
 </html>

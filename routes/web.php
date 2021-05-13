@@ -58,6 +58,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::group(['middleware' => ['cek_login:mekanik']], function () {
         Route::resource('mekanik', MekanikController::class);
+        // Route::resource('admin/mobil', MobilController::class);
     });
 });
 
