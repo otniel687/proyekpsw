@@ -25,14 +25,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/regis', function () {
-//     return view('regitrasi.registration');
-// });
-
 Route::get('/about', [AboutController::class,'tentang']);
 Route::get('/kontak', [AboutController::class, 'kontak']);
 Route::get('/service', [ServiceController::class, 'service']);
-// Route::get('/registrasi', [AboutController::class,'regis']);
 
 Route::get('/registrasi', [BookingController::class, 'index'])->name('registrasi');
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
@@ -43,7 +38,6 @@ Route::get('logout', 'App\Http\Controllers\AuthController@logout')->name('logout
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cek_login:admin']], function () {
-        // Route::resource('admin', AdminController::class);
         Route::resource('admin/customer', CustomerController::class);
         Route::resource('admin/mobil', MobilController::class);
     });
@@ -53,8 +47,6 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::group(['middleware' => ['cek_login:mekanik']], function () {
         Route::resource('mekanik', MekanikController::class);
-        // Route::get('mekanik/show', MekanikController::class, 'show');
-        // Route::resource('admin/mobil', MobilController::class);
     });
 });
 
