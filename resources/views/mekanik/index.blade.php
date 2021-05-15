@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,8 +66,8 @@
 					<td>
 					<form action="{{route('mekanik.show',$mobil->id)}}" method="POST" >
                     @csrf
-					<a class="btn btn-info btn-sm" href="{{ route('mekanik.show',$mobil->id) }}">Show</a>	
-                    </form>
+					<a class="btn btn-info btn-sm" href="{{ route('mekanik.show',$mobil->id) }}">Show</a>	   
+                </form>
 				</td>
 			</tr>
 			@endforeach

@@ -26,9 +26,9 @@ class BookingController extends Controller
 
         // dd($data);
         $this->validate($request,[
-            'Nama'              =>  'required',
-            'Alamat'            =>  'required',
-            'NoTelp'            =>  'required'
+            'Nama'              => 'required',
+            'Alamat'            => 'required',
+            'NoTelp'            => 'required'
         ]);
 
         $customer = new Customer;
@@ -52,7 +52,7 @@ class BookingController extends Controller
             'Plat_Nomor'       =>  'required',
             'Pemilik'         =>   'required',
             'stnk'             =>  'required',
-            'keluhan'          =>  'required'
+            'keluhan'          =>  'required '
         ]);
 
         $mobil = new Mobil;

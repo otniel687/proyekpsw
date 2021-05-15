@@ -59,6 +59,13 @@ class AuthController extends Controller
     public function simpanregister(Request $request){
         // dd($request->all());
         
+        $this->validate($request,[
+            'name'          => 'required',
+            'username'      => 'required',
+            'email'         => 'required',
+            'password'      => 'required'
+        ]);
+
         User::create([
             'name' => $request->name, 
             'username' => $request->username,
@@ -68,7 +75,7 @@ class AuthController extends Controller
             'remember_token' => Str::random(60),
         ]);
         
-         return redirect()->intended('pelanggan');
+         return redirect()->intended('login');
     }
 
     public function logout(Request $request)

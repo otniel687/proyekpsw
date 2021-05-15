@@ -22,7 +22,7 @@ class AkunSeeder extends Seeder
                'email'=>'admin@example.com',
                 'level'=>'admin',
                'password'=> bcrypt('123456'),
-               'Remember_token' => Str::random(60),
+               'Remember_token' => Str::random(60)
             ],
             [
                 'username' => 'user',
@@ -30,36 +30,52 @@ class AkunSeeder extends Seeder
                'email'=>'user@example.com',
                 'level'=>'mekanik',
                'password'=> bcrypt('123456'),
-               'Remember_token' => Str::random(60),
+               'Remember_token' => Str::random(60)
+            ],
+            [
+                'username' => 'mekanik1',
+               'name'=>'ini akun Mekanik (non admin)',
+               'email'=>'mekanik1@example.com',
+                'level'=>'mekanik',
+               'password'=> bcrypt('123456'),
+               'Remember_token' => Str::random(60)
+            ],
+            [
+                'username' => 'mekanik2',
+               'name'=>'ini akun Mekanik (non admin)',
+               'email'=>'mekanik2@example.com',
+                'level'=>'mekanik',
+               'password'=> bcrypt('123456'),
+               'Remember_token' => Str::random(60)
+            ],
+            [
+                'username' => 'mekanik3',
+               'name'=>'ini akun Customer (non admin)',
+               'email'=>'mekanik3@example.com',
+                'level'=>'mekanik',
+               'password'=> bcrypt('123456'),
+               'Remember_token' => Str::random(60)
+            ],
+            [
+                'username' => 'mekanik4',
+               'name'=>'ini akun Mekanik (non admin)',
+               'email'=>'mekanik4@example.com',
+                'level'=>'mekanik',
+               'password'=> bcrypt('123456'),
+               'Remember_token' => Str::random(60)
+            ],
+            [
+                'username' => 'mekanik5',
+               'name'=>'ini akun Customer (non admin)',
+               'email'=>'mekanik5@example.com',
+                'level'=>'mekanik',
+               'password'=> bcrypt('123456'),
+               'Remember_token' => Str::random(60)
             ],
             [
                 'username' => 'otniel',
-               'name'=>'ini akun Mekanik (non admin)',
+               'name'=>'ini akun Customer (non admin)',
                'email'=>'otniel@example.com',
-                'level'=>'mekanik',
-               'password'=> bcrypt('123456'),
-               'Remember_token' => Str::random(60),
-            ],
-            [
-                'username' => 'naruto',
-               'name'=>'ini akun Mekanik (non admin)',
-               'email'=>'naruto@example.com',
-                'level'=>'mekanik',
-               'password'=> bcrypt('123456'),
-               'Remember_token' => Str::random(60),
-            ],
-            [
-                'username' => 'sasuke',
-               'name'=>'ini akun Customer (non admin)',
-               'email'=>'sasuke@example.com',
-                'level'=>'pelanggan',
-               'password'=> bcrypt('123456'),
-               'Remember_token' => Str::random(60),
-            ],
-            [
-                'username' => 'sakura',
-               'name'=>'ini akun Customer (non admin)',
-               'email'=>'sakura@example.com',
                 'level'=>'pelanggan',
                'password'=> bcrypt('123456'),
                'Remember_token' => Str::random(60),

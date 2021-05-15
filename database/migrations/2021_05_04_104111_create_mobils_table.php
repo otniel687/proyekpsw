@@ -33,6 +33,6 @@ class CreateMobilsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mobil');
+        Schema::dropIfExists('mobils');
     }
 }

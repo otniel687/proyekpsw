@@ -66,11 +66,11 @@
             <h3>Personal Information</h3>
               <form action="/booking" method="POST">
                 @csrf
-                {{-- @if (session('status'))
+                @if (session('status'))
                   <div class="alert alert-success">
                     {{session('status')}}
                   </div>  
-                @endif --}}
+                @endif
                 <div>
                   <label for="Nama" class="form-label">Nama</label>
                   <input type="text" class="form-control" id="Nama" name="Nama" />
@@ -176,7 +176,7 @@
       </section>
       </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
@@ -191,6 +191,6 @@
             toastr.error('{{ session('error') }}', 'GAGAL!'); 
             
         @endif
-    </script>
+    </script> --}}
   </body>
 </html>

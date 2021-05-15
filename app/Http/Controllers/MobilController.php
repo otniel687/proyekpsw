@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\mobil;
+use App\Models\Mobil;
 use Illuminate\Http\Request;
 
 class MobilController extends Controller
@@ -32,12 +32,12 @@ class MobilController extends Controller
         $no_pengembalian = 'MBL/'.$blt.'/'.$idbaru;
 
          $this->validate($request,[
-            'Jenis'            =>  'required',
-            'Merek'            =>  'required',
-            'Plat_Nomor'       =>  'required',
-            'Pemilik'         =>   'required',
-            'stnk'             =>  'required',
-            'keluhan'          =>  'required'
+             'Plat_Nomor'       =>  'required | string | min:3 | max:100',
+             'Pemilik'         =>   'required | string | min:3 | max:100',
+             'Merek'            =>  'required | string | min:3 | max:100',
+             'stnk'             =>  'required | string | min:3 | max:100',
+             'keluhan'          =>  'required | string | min:3 | max:255',
+             'Jenis'            =>  'required | string | min:3 | max:100 '
         ]);
 
         $mobil = Mobil::create([
@@ -75,12 +75,12 @@ class MobilController extends Controller
         $no_pengembalian = 'MBL/'.$blt.'/'.$idbaru;
 
          $request->validate([
-            'Jenis'            =>  'required',
-            'Merek'            =>  'required',
-            'Plat_Nomor'       =>  'required',
-            'Pemilik'          =>  'required',
-            'stnk'             =>  'required',
-            'keluhan'          =>  'required'
+            'Jenis'            =>  'required | string | min:3 | max:100',
+            'Merek'            =>  'required | string | min:3 | max:100',
+            'Plat_Nomor'       =>  'required | string | min:3 | max:100',
+            'Pemilik'          =>  'required | string | min:3 | max:100',
+            'stnk'             =>  'required | string | min:3 | max:255',
+            'keluhan'          =>  'required | string | min:3 | max:100 '
         ]);
 
         Mobil::where('id', $mobil->id)
@@ -95,7 +95,7 @@ class MobilController extends Controller
         ]);
 
         return redirect()->route('mobil.index')
-                        ->with('success','Data telah Ditambahkan');
+                        ->with('success','Data telah Diubah');
     }
 
     public function destroy(Mobil $mobil)

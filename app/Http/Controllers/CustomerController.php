@@ -32,9 +32,9 @@ class CustomerController extends Controller
         $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
 
         $this->validate($request,[
-            'Nama'              =>  'required',
-            'Alamat'            =>  'required',
-            'NoTelp'            =>  'required'
+            'Nama'              =>  'required|string|max:100',
+            'Alamat'            =>  'required|string|max:255',
+            'NoTelp'            =>  'required|numeric'
         ]);
 
         $customer = Customer::create([
@@ -69,9 +69,9 @@ class CustomerController extends Controller
         $no_pengembalian = 'SVC/'.$blt.'/'.$idbaru;
 
         $request->validate([
-            'Nama'              =>  'required',
-            'Alamat'            =>  'required',
-            'NoTelp'            =>  'required'
+            'Nama'              =>  'required|string|max:100',
+            'Alamat'            =>  'required|string|max:255',
+            'NoTelp'            =>  'required|numeric'
         ]);
 
         Customer::where('id', $customer->id)
@@ -83,7 +83,7 @@ class CustomerController extends Controller
         ]);
 
          return redirect()->route('customer.index')
-                        ->with('success','Data telah Ditambahkan');
+                        ->with('success','Data telah Diubah');
     }
 
     public function destroy(Customer $customer)

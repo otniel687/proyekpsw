@@ -28,16 +28,11 @@ Route::get('/', function () {
 // Route::get('/regis', function () {
 //     return view('regitrasi.registration');
 // });
-// Route::get('/kontak', 'App\Http\Controllers\KontakController@kontak');
+
 Route::get('/about', [AboutController::class,'tentang']);
 Route::get('/kontak', [AboutController::class, 'kontak']);
 Route::get('/service', [ServiceController::class, 'service']);
 // Route::get('/registrasi', [AboutController::class,'regis']);
-// Route::get('/login', [LoginController::class,'login']);
-// Route::get('/login/admin', [LoginController::class,'admin']);
-// Route::get('/login/customer', [LoginController::class,'customer']);
-// Route::get('/login/mekanik', [LoginController::class,'mekanik']);
-// Route::get('/login/regis', [LoginController::class,'regis']);
 
 Route::get('/registrasi', [BookingController::class, 'index'])->name('registrasi');
 Route::get('login', 'App\Http\Controllers\AuthController@index')->name('login');
@@ -58,6 +53,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::group(['middleware' => ['cek_login:mekanik']], function () {
         Route::resource('mekanik', MekanikController::class);
+        // Route::get('mekanik/show', MekanikController::class, 'show');
         // Route::resource('admin/mobil', MobilController::class);
     });
 });
